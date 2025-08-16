@@ -296,6 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 450230248}
   - component: {fileID: 450230247}
+  - component: {fileID: 450230249}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -355,6 +356,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2122469429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &450230249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450230246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85258fad17a2f33d0a17bb06b40e5ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gatePool: {fileID: 807888716}
+  spawnInternal: 30
+  distance: 30
+  deactivateDistance: 50
+  player: {fileID: 438721819}
 --- !u!1 &494464467
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +791,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &807888714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 807888715}
+  - component: {fileID: 807888716}
+  m_Layer: 0
+  m_Name: GatePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &807888715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807888714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2122469429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &807888716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807888714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63903228df3a391a89939c681ddb0c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2933090664294396635, guid: 1408b3eec49520796b7de8f55abfbb6b, type: 3}
+  poolSize: 6
+  expandable: 0
 --- !u!1 &852245955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,6 +1982,7 @@ Transform:
   - {fileID: 685449568}
   - {fileID: 1599505739}
   - {fileID: 1249743842}
+  - {fileID: 807888715}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141333676

@@ -6,7 +6,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] int bulletSpeed = 10;
     [SerializeField] ObjectPool bulletPool;
     [SerializeField] Transform player;
-    [SerializeField] float spawnInterval = 1f;
+    [SerializeField] public float spawnInterval = 1f;
 
     private Quaternion spawnRotation = Quaternion.Euler(90f, 0f, 0f);
 

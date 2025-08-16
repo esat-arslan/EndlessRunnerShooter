@@ -44,4 +44,39 @@ public class ObjectPool : MonoBehaviour
         // Nothign avaible
         return null;
     }
+
+    public List<GameObject> GetTwoPooledObjects()
+    {
+        List<GameObject> objects = new List<GameObject>(2);
+        int foundCount = 0;
+
+        foreach (GameObject obj in pool)
+        {
+            if (!obj.activeInHierarchy)
+            {
+                objects.Add(obj);
+                foundCount++;
+
+                if (foundCount == 2)
+                {
+                    return objects;
+                }
+            }
+        }
+
+        if (expandable)
+        {
+            while (foundCount < 2)
+            {
+                GameObject obj = Instantiate(prefab);
+                obj.SetActive(false);
+                pool.Add(obj);
+                objects.Add(obj);
+                foundCount++;
+            }
+            return objects;
+        }
+
+        return objects;
+    }
 }
