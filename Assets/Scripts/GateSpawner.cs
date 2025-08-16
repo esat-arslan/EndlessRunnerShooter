@@ -49,6 +49,9 @@ public class GateSpawner : MonoBehaviour
         gate2.transform.position = spawnPos2;
         gate2.transform.rotation = Quaternion.identity;
 
+        gate1.GetComponent<GateType>().SetGateText("Fuuuuuuuuuu");
+        gate2.GetComponent<GateType>().SetGateText("YAYYYYYYYYY");
+
         gate1.SetActive(true);
         gate2.SetActive(true);
         
