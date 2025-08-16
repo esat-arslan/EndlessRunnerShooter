@@ -1,15 +1,21 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MobileMovement : MonoBehaviour
 {
     
-    public float WalkSpeed = 2;
+    public float WalkSpeed = 4f;
     public InputActionAsset InputActions;
 
     private InputAction m_moveAction;
 
     private Vector2 m_moveAmt;
+
+    public float distanceTraveled;
+
+    public PlayerController playerController;
+    public TextMeshProUGUI ditstanceText;
 
     private void OnEnable()
     {
@@ -35,5 +41,8 @@ public class MobileMovement : MonoBehaviour
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -9f, 9f);
         transform.position = pos;
+
+        distanceTraveled += playerController.playerSpeed * Time.deltaTime;
+        ditstanceText.text = "Distance: " + Mathf.FloorToInt(distanceTraveled).ToString();
     }
 }
