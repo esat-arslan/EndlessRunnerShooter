@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] ObjectPool bulletPool;
     [SerializeField] Transform player;
     [SerializeField] public float spawnInterval = 1f;
+    public int multishot = 1;
 
     private Quaternion spawnRotation = Quaternion.Euler(90f, 0f, 0f);
 
@@ -19,7 +20,14 @@ public class Shooting : MonoBehaviour
     {
         while (true)
         {
-            SpawnBullet();
+            for (int i = 0; i < multishot; i++)
+            {
+                SpawnBullet();
+                if (multishot > 1)
+                {
+                    yield return new WaitForSeconds(0.1f);
+                }
+            }
             yield return new WaitForSeconds(spawnInterval);
         }
     }

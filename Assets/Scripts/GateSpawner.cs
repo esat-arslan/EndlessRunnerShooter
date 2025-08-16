@@ -49,8 +49,23 @@ public class GateSpawner : MonoBehaviour
         gate2.transform.position = spawnPos2;
         gate2.transform.rotation = Quaternion.identity;
 
-        gate1.GetComponent<GateType>().SetGateText("Fuuuuuuuuuu");
-        gate2.GetComponent<GateType>().SetGateText("YAYYYYYYYYY");
+        //gate1.GetComponent<GateType>().SetGateText("Fuuuuuuuuuu");
+        //gate2.GetComponent<GateType>().SetGateText("YAYYYYYYYYY");
+
+        GateType gateType1 = gate1.GetComponent<GateType>();
+        PowerUpTypes powerUp1 = (PowerUpTypes)UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(PowerUpTypes)).Length);
+        gateType1.powerUpTypes = powerUp1;
+        gateType1.SetGateText(powerUp1.ToString());
+
+        GateType gateType2 = gate2.GetComponent<GateType>();
+        PowerUpTypes powerUp2;
+        do
+        {
+            powerUp2 = (PowerUpTypes)UnityEngine.Random.Range(1, System.Enum.GetValues(typeof(PowerUpTypes)).Length);
+        } while (powerUp2 == powerUp1);
+
+        gateType2.powerUpTypes = powerUp2;
+        gateType2.SetGateText(powerUp2.ToString());
 
         gate1.SetActive(true);
         gate2.SetActive(true);
