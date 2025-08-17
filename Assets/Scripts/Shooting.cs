@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [SerializeField] AudioSource BulletFX;
     [SerializeField] int bulletSpeed = 10;
     [SerializeField] ObjectPool bulletPool;
     [SerializeField] Transform player;
@@ -48,6 +49,8 @@ public class Shooting : MonoBehaviour
             {
                 rb.linearVelocity = player.forward * bulletSpeed;
             }
+
+            BulletFX.PlayOneShot(BulletFX.clip);
         }
     }
 }
