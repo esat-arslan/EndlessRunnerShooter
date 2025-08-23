@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0821857d6655b983d9e11f1fa7d57133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 4
+  WalkSpeed: 8
   InputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   distanceTraveled: 0
   playerController: {fileID: 438721820}
@@ -495,10 +495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletFX: {fileID: 163399205}
-  bulletSpeed: 10
+  bulletSpeed: 20
   bulletPool: {fileID: 1024189333}
   player: {fileID: 438721819}
-  spawnInterval: 1
+  spawnInterval: 0.9
   multishot: 1
 --- !u!114 &438721825
 MonoBehaviour:
@@ -624,7 +624,7 @@ MonoBehaviour:
   spawnRangeX: 8
   spawnY: 6
   maxDistance: 20
-  minDistance: 30
+  minDistance: 50
   thePlayer: {fileID: 438721819}
 --- !u!4 &450230248
 Transform:
