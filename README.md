@@ -1,73 +1,169 @@
-3D Endless Runner (Work-in-Progress)
+# 🏃‍♂️ Endless Runner
 
+A Unity-based endless runner game developed as a portfolio project to showcase game development skills and programming expertise.
 
-🎮 Overview
+## 🎮 Game Overview
 
-This is a 3D endless runner game built in Unity with C#. The player controls a soldier character who constantly shoots forward while avoiding enemies and collecting power-ups. This project is a work-in-progress, showcasing core gameplay mechanics for portfolio purposes.
-
-🚀 Gameplay
-
-Player Character: Soldier that automatically shoots forward.
-
-Movement: Player can move left or right using keyboard (A/D) or touchscreen joystick.
-
-Bullets: Spawn from an object pool. Destroyed on hitting enemies or after a certain range. Bullet firing uses coroutines for timing.
-
-Enemies: Spawn from an enemy pool. Currently placeholder objects (triangle, sphere, cube) that move toward the player at varying speeds depending on type.
-
-Map Segments: There are 3 map segments that reposition in front of the player as they advance.
-
-Power-Up Gates: Provide temporary buffs for 5 seconds:
-
-Increased speed
-
-Increased fire rate
-
-Multi-shoot
-
-Score: Based on distance traveled.
-
-📂 Features
-
-Core endless runner loop implemented
-
-Object pooling for bullets and enemies for performance
-
-Power-ups that modify player stats temporarily
-
-Keyboard and touchscreen joystick controls
-
-Modular map segments for seamless endless movement
-
-Placeholder assets to demonstrate functionality
-
-🛠 Tech Stack
-
-Engine: Unity 2021+
-
-Language: C#
-
-Design Patterns: Singleton (for GameManager), Coroutines for bullets and spawning
-
-📝 Notes
-
-Work-in-progress: Core gameplay mechanics implemented; visuals, audio, and full enemy behaviors will be added later.
-
-Portfolio focus: Demonstrates object pooling, coroutines, power-up mechanics, and endless runner logic.
+**Endless Runner 3D** is a fast-paced, action-packed endless runner where players control a character that automatically moves forward while dodging enemies and collecting power-ups. The game features a progressive difficulty system, multiple enemy types, and strategic power-up choices that affect gameplay.
 
 🎥 Gameplay Demo
 
 [![Watch the video](https://img.youtube.com/vi/scVINHF8ds4/hqdefault.jpg)](https://youtu.be/scVINHF8ds4)
 
 
-⚡ Future Plans
+## ✨ Key Features
 
-Replace placeholder enemy objects with actual 3D models
+### 🎯 Core Gameplay
+- **Automatic Forward Movement**: Player continuously moves forward at increasing speeds
+- **Lateral Movement**: Use left/right controls to dodge obstacles and enemies
+- **Distance Tracking**: Real-time distance measurement displayed on screen
+- **Progressive Difficulty**: Game becomes more challenging as you travel further
 
-Add sound effects and background music
+### 🔫 Combat System
+- **Automatic Shooting**: Continuous bullet firing system
+- **Enemy Collision**: Bullets destroy enemies on contact
+- **Object Pooling**: Efficient bullet and enemy management for smooth performance
 
-Implement more diverse power-ups and enemy types
+### 🚀 Power-Up System
+- **Speed Boost**: Temporarily doubles player movement speed
+- **Fire Rate Boost**: Reduces shooting interval for rapid-fire action
+- **Multishot**: Fires multiple bullets simultaneously
+- **Strategic Choice**: Choose between two different power-ups at gates
 
-Polish UI and add start/game over screens
+### 👾 Enemy System
+- **Multiple Enemy Types**: 3 different enemy categories with varying spawn rates
+- **Progressive Spawning**: Enemy difficulty increases based on distance traveled
+- **Smart Spawning**: Enemies spawn ahead of the player at strategic distances
+- **Object Pooling**: Efficient enemy management for smooth gameplay
 
-Add player health and death mechanics
+### 🎨 Technical Features
+- **Unity Input System**: Modern input handling for cross-platform compatibility
+- **Universal Render Pipeline**: Optimized graphics for various platforms
+- **Mobile Optimization**: Designed with mobile performance in mind
+- **Audio Integration**: Sound effects for shooting and gameplay feedback
+
+## 🛠️ Technical Implementation
+
+### Architecture
+- **Component-Based Design**: Modular scripts for easy maintenance and extension
+- **Object Pooling**: Efficient memory management for bullets and enemies
+- **Event-Driven Systems**: Clean separation of concerns between game systems
+- **Configurable Parameters**: Easy-to-tune gameplay values through inspector
+
+### Key Scripts
+- `PlayerController.cs` - Core player movement and speed management
+- `MobileMovement.cs` - Input handling and lateral movement
+- `Shooting.cs` - Bullet spawning and firing mechanics
+- `EnemySpawner.cs` - Dynamic enemy spawning with difficulty progression
+- `EnemyStage.cs` - Configurable difficulty stages
+- `PowerUp.cs` - Power-up activation and management system
+- `ObjectPool.cs` - Efficient object pooling for performance
+- `GateSpawner.cs` - Power-up gate spawning and management
+
+### Performance Optimizations
+- **Object Pooling**: Prevents garbage collection spikes
+- **Distance-Based Culling**: Deactivates objects behind the player
+- **Efficient Spawning**: Smart spawn timing and positioning
+- **Memory Management**: Proper cleanup of inactive game objects
+
+## 🎮 Controls
+
+- **Left/Right Movement**: Use A/D keys, arrow keys, or gamepad left stick
+- **Automatic Actions**: Forward movement and shooting happen automatically
+- **Power-Up Selection**: Move through gates to activate power-ups
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Unity 2022.3 LTS or later
+- Universal Render Pipeline package
+- Input System package
+
+### Installation
+1. Clone this repository
+2. Open the project in Unity
+3. Open the `MainGame` scene from `Assets/Scenes/`
+4. Press Play to start the game
+
+### Build
+- **Mobile**
+
+## 🔧 Customization
+
+### Game Balance
+- Adjust enemy spawn rates in `EnemySpawner.cs`
+- Modify power-up durations in `PowerUp.cs`
+- Tune player and enemy speeds in respective scripts
+- Configure difficulty stages in `EnemyStage.cs`
+
+### Visual Assets
+- Replace placeholder enemy shapes with custom models
+- Add particle effects for power-ups and combat
+- Implement custom UI elements for enhanced presentation
+- Add background music and additional sound effects
+
+## 📱 Platform Support
+
+- **PC**: Full support with keyboard and gamepad input
+- **Mobile**: Optimized for touch controls and mobile performance
+
+## 🎯 Future Enhancements
+
+### Planned Features
+- **Visual Polish**: Replace placeholder shapes with proper 3D models
+- **Sound Design**: Background music and enhanced audio effects
+- **UI Improvements**: Better HUD, menus, and visual feedback
+- **Particle Effects**: Explosions, power-up effects, and visual polish
+- **Score System**: High score tracking and achievements
+- **Multiple Characters**: Different player characters with unique abilities
+
+### Technical Improvements
+- **Save System**: Progress persistence and settings
+- **Analytics**: Player behavior tracking and game balance data
+- **Localization**: Multi-language support
+- **Accessibility**: Colorblind support and customizable controls
+
+## 🏗️ Project Structure
+
+```
+Assets/
+├── Scripts/
+│   ├── Player/          # Player movement, shooting, and controls
+│   ├── Enemy/           # Enemy spawning, movement, and difficulty
+│   ├── PowerUps/        # Power-up system and gates
+│   └── Pooling/         # Object pooling for performance
+├── Prefabs/             # Game object prefabs
+├── Scenes/              # Game scenes
+├── Audio/               # Sound effects and audio
+└── Settings/            # Render pipeline and project settings
+```
+
+## 🎓 Skills Demonstrated
+
+This project showcases proficiency in:
+- **Unity Game Development**: Core engine features and best practices
+- **C# Programming**: Clean, maintainable code architecture
+- **Game Design**: Balanced gameplay mechanics and progression
+- **Performance Optimization**: Object pooling and efficient systems
+- **Input Systems**: Modern Unity input handling
+- **Component Architecture**: Modular and extensible design patterns
+- **Cross-Platform Development**: Mobile and PC compatibility
+
+## 📄 License
+
+This project is developed as a portfolio piece. Feel free to use the code structure and concepts for learning purposes.
+
+## 🤝 Contributing
+
+This is a portfolio project, but feedback and suggestions are welcome! Feel free to:
+- Report bugs or issues
+- Suggest improvements or new features
+- Share your own implementations or variations
+
+## 📞 Contact
+
+For questions about this project or collaboration opportunities, please reach out through your portfolio or professional channels.
+
+---
+
+**Developed with Unity and C#** | **Portfolio Project** | **Endless Runner Game**
