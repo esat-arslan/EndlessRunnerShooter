@@ -72,22 +72,6 @@ A Unity-based endless runner game developed as a portfolio project to showcase g
 - **Automatic Actions**: Forward movement and shooting happen automatically
 - **Power-Up Selection**: Move through gates to activate power-ups
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Unity 2022.3 LTS or later
-- Universal Render Pipeline package
-- Input System package
-
-### Installation
-1. Clone this repository
-2. Open the project in Unity
-3. Open the `MainGame` scene from `Assets/Scenes/`
-4. Press Play to start the game
-
-### Build
-- **Mobile**
-
 ## 🔧 Customization
 
 ### Game Balance
