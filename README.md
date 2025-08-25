@@ -8,8 +8,11 @@ A Unity-based endless runner game developed as a portfolio project to showcase g
 
 🎥 Gameplay Demo
 
-[![Watch the video](https://img.youtube.com/vi/scVINHF8ds4/hqdefault.jpg)](https://youtu.be/scVINHF8ds4)
+[![Watch the video](https://img.youtube.com/vi/eNN7m9vyUqI/hqdefault.jpg)](https://youtu.be/eNN7m9vyUqI)
 
+
+### Chagelog:
+  ** Enemy place holders replaced with actualy enemy types
 
 ## ✨ Key Features
 
