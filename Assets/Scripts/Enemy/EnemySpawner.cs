@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
             UnityEngine.Vector3 spawnPos = thePlayer.position + thePlayer.forward * distance;
 
             spawnPos.x = randomX;
-            spawnPos.y = 2f;
+            spawnPos.y = 0f;
 
             enemy.transform.position = spawnPos;
             enemy.transform.LookAt(thePlayer.position);
